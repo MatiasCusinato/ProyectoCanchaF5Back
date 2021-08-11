@@ -15,8 +15,17 @@ class CreateTurnosTable extends Migration
     {
         Schema::create('turnos', function (Blueprint $table) {
             $table->id();
+            
             $table->unsignedBigInteger("id_usuario")->nullable();
+            $table->foreign('id_usuario')
+                    ->references('id')->on('usuarios')
+                    ->onDelete('set null');
+
             $table->unsignedBigInteger("id_cobranza")->nullable();
+            $table->foreign('id_cobranza')
+                    ->references('id')->on('cobranzas')
+                    ->onDelete('set null');
+
             $table->string("nombre_turno");
             $table->enum('tipo_turno', ['Escuelaf5','Entrenamiento','Futbol5','Cumpleaños']);
             $table->dateTime("fecha_Desde");

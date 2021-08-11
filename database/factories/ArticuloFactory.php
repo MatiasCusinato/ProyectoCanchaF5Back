@@ -22,7 +22,10 @@ class ArticuloFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombre' => $this->faker->lastName,
+            'precio' => $this->faker->numberBetween($min = 30, $max = 1000),
+            'stock_minimo' => $this->faker->numberBetween($min = 100, $max = 200),
+            'stock_maximo' => $this->faker->numberBetween($min = 300, $max = 500),
         ];
     }
 }

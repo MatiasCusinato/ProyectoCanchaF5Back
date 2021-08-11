@@ -15,7 +15,7 @@ class CreateArticulosTable extends Migration
     {
         Schema::create('articulos', function (Blueprint $table) {
             $table->id();
-            $table->varchar("nombre");
+            $table->string("nombre");
             $table->integer("precio");
             $table->integer("stock_minimo");
             $table->integer("stock_maximo");
