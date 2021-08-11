@@ -22,7 +22,9 @@ class CompraArticuloFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'id_cobranza' => $this->faker->numberBetween($min = 1, $max = 30),
+            'id_articulo' => $this->faker->numberBetween($min = 1, $max = 20),
+            'cantidad' => $this->faker->numberBetween($min = 1, $max = 5),
         ];
     }
 }

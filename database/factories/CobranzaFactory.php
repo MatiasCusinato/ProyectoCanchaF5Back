@@ -22,7 +22,9 @@ class CobranzaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'fecha' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
+            'precio' => $this->faker->numberBetween($min = 400, $max = 1000),
+            'estado' => $this->faker->numberBetween($min = 1, $max = 3),
         ];
     }
 }
