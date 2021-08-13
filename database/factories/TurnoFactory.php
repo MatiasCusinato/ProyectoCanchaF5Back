@@ -22,8 +22,8 @@ class TurnoFactory extends Factory
     public function definition()
     {
         return [
-            'id_usuario' => $this->faker->numberBetween($min = 1, $max = 10),
-            'id_cobranza' => $this->faker->numberBetween($min = 1, $max = 30),
+            'usuario_id' => $this->faker->numberBetween($min = 1, $max = 10),
+            'cobranza_id' => $this->faker->numberBetween($min = 1, $max = 30),
             'nombre_turno' => $this->faker->lastName,
             'tipo_turno' => $this->faker->numberBetween($min = 1, $max = 4),
             'fecha_Desde' => $this->faker->date($format = 'Y-m-d', $max = 'now'),

@@ -16,13 +16,13 @@ class CreateCompraArticulosTable extends Migration
         Schema::create('compra_articulos', function (Blueprint $table) {
             $table->id();
             
-            $table->unsignedBigInteger("id_cobranza")->nullable();
-            $table->foreign('id_cobranza')
+            $table->unsignedBigInteger("cobranza_id")->nullable();
+            $table->foreign('cobranza_id')
                     ->references('id')->on('cobranzas')
                     ->onDelete('set null');
 
-            $table->unsignedBigInteger("id_articulo")->nullable();
-            $table->foreign('id_articulo')
+            $table->unsignedBigInteger("articulo_id")->nullable();
+            $table->foreign('articulo_id')
                     ->references('id')->on('articulos')
                     ->onDelete('set null');
 

@@ -16,13 +16,13 @@ class CreateTurnosTable extends Migration
         Schema::create('turnos', function (Blueprint $table) {
             $table->id();
             
-            $table->unsignedBigInteger("id_usuario")->nullable();
-            $table->foreign('id_usuario')
+            $table->unsignedBigInteger("usuario_id")->nullable();
+            $table->foreign('usuario_id')
                     ->references('id')->on('usuarios')
                     ->onDelete('set null');
 
-            $table->unsignedBigInteger("id_cobranza")->nullable();
-            $table->foreign('id_cobranza')
+            $table->unsignedBigInteger("cobranza_id")->nullable();
+            $table->foreign('cobranza_id')
                     ->references('id')->on('cobranzas')
                     ->onDelete('set null');
 

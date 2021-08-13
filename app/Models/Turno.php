@@ -9,16 +9,16 @@ class Turno extends Model
 {
     use HasFactory;
 
-    //Relacion 1 a 1
+    //Relacion inversa 1 a 1
     public function cobranza()
     {
-        return $this->hasOne(Cobranza::class);
+        return $this->belongsTo('App\Models\Cobranza');
     }
 
     //Relacion 1 a M INVERSA
     public function usuario()
     {
-        return $this->belongsTo(Usuario::class);
+        return $this->belongsTo('App\Models\Usuario');
     }
 
 
