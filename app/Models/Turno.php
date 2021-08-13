@@ -9,7 +9,8 @@ class Turno extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id_usuario','id_cobranza','nombre_turno','tipo_turno','fecha_Desde','fecha_Hasta'];
+    //Relacion inversa 1 a 1
+    protected $fillable = ['usuario_id','cobranza_id','nombre_turno','tipo_turno','fecha_Desde','fecha_Hasta'];
 
     protected $hidden = [
         'created_at',
@@ -19,13 +20,13 @@ class Turno extends Model
     //Relacion 1 a 1
     public function cobranza()
     {
-        return $this->hasOne(Cobranza::class);
+        return $this->belongsTo('App\Models\Cobranza');
     }
 
     //Relacion 1 a M INVERSA
     public function usuario()
     {
-        return $this->belongsTo(Usuario::class);
+        return $this->belongsTo('App\Models\Usuario');
     }
 
 

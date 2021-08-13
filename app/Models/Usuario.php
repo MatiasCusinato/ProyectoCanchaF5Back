@@ -19,7 +19,7 @@ class Usuario extends Model
     //Relacion 1 A M 
     public function turnos()
     {
-        return $this->hasMany(Turno::class);
+        return $this->hasMany('App\Models\Turno');
     }
 
     

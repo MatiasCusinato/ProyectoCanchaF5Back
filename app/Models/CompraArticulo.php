@@ -9,15 +9,26 @@ class CompraArticulo extends Model
 {
     use HasFactory;
 
-    //Relacion 1 a 1 
+    protected $fillable = [
+        'cobranza_id',
+        'articulo_id',
+        'cantidad'
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
+    //relacion INVERSA 1 A 1
     public function articulo()
     {
-        return $this->hasOne(Articulo::class);
+        return $this->belongsTo("App\Models\Articulo");
     }
 
     //Relacion 1 a M INVERSA
     public function cobranza()
     {
-        return $this->belongsTo(Cobranza::class);
+        return $this->belongsTo('App\Models\Cobranza');
     }
 }
