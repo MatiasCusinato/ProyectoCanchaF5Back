@@ -10,7 +10,14 @@ class Turno extends Model
     use HasFactory;
 
     //Relacion inversa 1 a 1
-    protected $fillable = ['usuario_id','cobranza_id','nombre_turno','tipo_turno','fecha_Desde','fecha_Hasta'];
+    protected $fillable = [
+        'usuario_id',
+        'cobranza_id',
+        'nombre_turno',
+        'tipo_turno',
+        'fecha_Desde',
+        'fecha_Hasta'
+    ];
 
     protected $hidden = [
         'created_at',

@@ -9,7 +9,13 @@ class Usuario extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nombre','apellido','telefono','edad','password'];
+    protected $fillable = [
+        'nombre',
+        'apellido',
+        'telefono',
+        'edad',
+        'password'
+    ];
 
     protected $hidden = [
         'created_at',
