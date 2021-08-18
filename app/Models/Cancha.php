@@ -18,9 +18,9 @@ class Cancha extends Model
         'updated_at'
     ];
 
-    public function turno() 
+    public function turnos() 
     {
-        return $this->hasOne('App\Models\Turno');
+        return $this->hasMany('App\Models\Turno');
     }
 
 }
