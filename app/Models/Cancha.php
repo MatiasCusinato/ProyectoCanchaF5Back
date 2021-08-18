@@ -5,14 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cobranza extends Model
+class Cancha extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'fecha',
-        'precio',
-        'estado'
+        'deporte',
     ];
 
     protected $hidden = [
@@ -20,17 +18,9 @@ class Cobranza extends Model
         'updated_at'
     ];
 
-    //Relacion 1 a M 
-    public function compraarticulos()
-    {
-        return $this->hasMany('App\Models\CompraArticulo');
-    }
-
-    //Relacion 1 a 1
-    public function turno()
+    public function turno() 
     {
         return $this->hasOne('App\Models\Turno');
     }
-    
 
 }

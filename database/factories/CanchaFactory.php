@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Cobranza;
+use App\Models\Cancha;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CobranzaFactory extends Factory
+class CanchaFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Cobranza::class;
+    protected $model = Cancha::class;
 
     /**
      * Define the model's default state.
@@ -22,9 +22,7 @@ class CobranzaFactory extends Factory
     public function definition()
     {
         return [
-            'fecha' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
-            'precio' => $this->faker->numberBetween($min = 400, $max = 1000),
-            'estado' => $this->faker->numberBetween($min = 1, $max = 3),
+            'deporte'=> $this->faker->word,
         ];
     }
 }

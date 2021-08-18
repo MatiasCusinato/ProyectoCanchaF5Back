@@ -18,7 +18,9 @@ class CreateUsuariosTable extends Migration
             $table->string("nombre");
             $table->string("apellido");
             $table->integer("telefono");
+            $table->integer("dni");
             $table->integer("edad");
+            $table->string("email");
             $table->string("password");
             $table->timestamps();
         });

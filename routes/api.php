@@ -2,9 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\API\ArticuloController;
-use App\Http\Controllers\API\CompraArticuloController;
-use App\Http\Controllers\API\CobranzaController;
 use App\Http\Controllers\API\UsuarioController;
 use App\Http\Controllers\API\TurnoController;
 
@@ -25,9 +22,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //APIS
-Route::apiResource('articulos', ArticuloController::class);
-Route::apiResource('compras-articulos', CompraArticuloController::class);
-Route::apiResource('cobranzas', CobranzaController::class);
 Route::apiResource('usuarios', UsuarioController::class);
 Route::apiResource('turnos', TurnoController::class);
 

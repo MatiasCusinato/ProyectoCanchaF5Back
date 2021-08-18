@@ -25,7 +25,9 @@ class UsuarioFactory extends Factory
             'nombre' => $this->faker->firstNameMale,
             'apellido' => $this->faker->lastName,
             'telefono' => $this->faker->ean8,
+            'dni'=> $this->faker->ean8,
             'edad' => $this->faker->numberBetween($min = 10, $max = 40),
+            'email' => $this->faker-> freeEmail, 
             'password' => $this->faker->word,
         ];
     }

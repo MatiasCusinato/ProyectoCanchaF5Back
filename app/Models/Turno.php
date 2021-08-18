@@ -24,16 +24,16 @@ class Turno extends Model
         'updated_at'
     ];
 
-    //Relacion 1 a 1
-    public function cobranza()
-    {
-        return $this->belongsTo('App\Models\Cobranza');
-    }
-
     //Relacion 1 a M INVERSA
     public function usuario()
     {
         return $this->belongsTo('App\Models\Usuario');
+    }
+
+    //Relacion 1 a 1 INVERSA
+    public function cancha() 
+    {
+        return $this->belongsTo('App\Models\Cancha');
     }
 
 

@@ -21,12 +21,11 @@ class CreateTurnosTable extends Migration
                     ->references('id')->on('usuarios')
                     ->onDelete('set null');
 
-            $table->unsignedBigInteger("cobranza_id")->nullable();
-            $table->foreign('cobranza_id')
-                    ->references('id')->on('cobranzas')
+            $table->unsignedBigInteger("cancha_id")->nullable();        
+            $table->foreign('cancha_id')
+                    ->references('id')->on('canchas')
                     ->onDelete('set null');
-
-            $table->string("nombre_turno");
+                    
             $table->enum('tipo_turno', ['Escuelaf5','Entrenamiento','Futbol5','Cumpleaños']);
             $table->dateTime("fecha_Desde");
             $table->dateTime("fecha_Hasta");

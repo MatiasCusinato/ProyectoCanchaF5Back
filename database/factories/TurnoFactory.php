@@ -23,11 +23,10 @@ class TurnoFactory extends Factory
     {
         return [
             'usuario_id' => $this->faker->numberBetween($min = 1, $max = 10),
-            'cobranza_id' => $this->faker->numberBetween($min = 1, $max = 30),
-            'nombre_turno' => $this->faker->lastName,
+            'cancha_id'  => $this->faker->numberBetween($min = 1, $max = 5),
             'tipo_turno' => $this->faker->numberBetween($min = 1, $max = 4),
             'fecha_Desde' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
-            'fecha_Hasta' => $this->faker->date($format = 'Y-m-d', $max = 'now'), 
+            'fecha_Hasta' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
         ];
     }
 }
