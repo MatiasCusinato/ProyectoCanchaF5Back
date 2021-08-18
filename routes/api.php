@@ -3,7 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\UsuarioController;
+use App\Http\Controllers\API\CanchaController;
 use App\Http\Controllers\API\TurnoController;
+
 
 
 /*
@@ -23,5 +25,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //APIS
 Route::apiResource('usuarios', UsuarioController::class);
+Route::apiResource('canchas', CanchaController::class);
 Route::apiResource('turnos', TurnoController::class);
 
