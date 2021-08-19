@@ -16,9 +16,9 @@ class CreateTurnosTable extends Migration
         Schema::create('turnos', function (Blueprint $table) {
             $table->id();
             
-            $table->unsignedBigInteger("usuario_id")->nullable();
-            $table->foreign('usuario_id')
-                    ->references('id')->on('usuarios')
+            $table->unsignedBigInteger("cliente_id")->nullable();
+            $table->foreign('cliente_id')
+                    ->references('id')->on('clientes')
                     ->onDelete('set null');
 
             $table->unsignedBigInteger("cancha_id")->nullable();        
@@ -29,6 +29,7 @@ class CreateTurnosTable extends Migration
             $table->enum('tipo_turno', ['Escuelaf5','Entrenamiento','Futbol5','Cumpleaños']);
             $table->dateTime("fecha_Desde");
             $table->dateTime("fecha_Hasta");
+            $table->enum('precio', ['0', '500', '1000' ]);
             $table->timestamps();
         });
     }

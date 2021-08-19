@@ -11,7 +11,7 @@ class Turno extends Model
 
     //Relacion inversa 1 a 1
     protected $fillable = [
-        'usuario_id',
+        'cliente_id',
         'cobranza_id',
         'nombre_turno',
         'tipo_turno',
@@ -25,9 +25,9 @@ class Turno extends Model
     ];
 
     //Relacion 1 a M INVERSA
-    public function usuario()
+    public function cliente()
     {
-        return $this->belongsTo('App\Models\Usuario');
+        return $this->belongsTo('App\Models\Cliente');
     }
 
     //Relacion 1 a 1 INVERSA

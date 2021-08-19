@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Usuario extends Model
+class Cliente extends Model
 {
     use HasFactory;
 
@@ -14,7 +14,7 @@ class Usuario extends Model
         'apellido',
         'telefono',
         'edad',
-        'password'
+        'email',
     ];
 
     protected $hidden = [
